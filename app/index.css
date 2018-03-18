@@ -1,0 +1,35 @@
+body {
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    padding: 0
+}
+
+.nav li {
+    list-style-type: none;
+    margin: 10px
+}
+
+a {
+    text-decoration: none;
+    color: #d0021b;
+}
+
+a:hover {
+    font-weight: bold
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    align-items: center
+}
+
+.home-container {
+    text-align: center
+}
