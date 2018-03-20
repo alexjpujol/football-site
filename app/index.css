@@ -27,16 +27,30 @@ a:hover {
 .container {
     width: 80%;
     margin: 0 auto;
-    align-items: center
+    align-items: center;
 }
 
-.home-container {
-    text-align: center
+.competitions-container {
+    display: flex;
 }
+
+.select-year {
+    flex: 1;
+}
+
+.select-year ul {
+    padding: 0
+}
+
 
 .select-year li {
     list-style-type: none;
+    text-align: center;
     margin: 10px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.competitions-grid {
+    flex: 6
 }

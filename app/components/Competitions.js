@@ -6,8 +6,8 @@ import Api from '../utils/api';
 const SelectYear = props => {
     const years = ['2017', '2016', '2015','2014', '2013', '2012', '2011', '2010', '2009', '2008', '2007', '2006', '2005', '2004', '2003', '2002', '2001', '2000']
     return (
-        <div>
-            <ul className="select-year">
+        <div className="select-year">
+            <ul>
                 {years.map(year => {
                     return (
                         <li
@@ -29,12 +29,22 @@ SelectYear.propTypes = {
     selectedSeason: PropTypes.string.isRequired
 }
 
+const CompetitionsGrid = props => {
+    return(
+        <div className="competitions-grid">
+            <h1>This is the grid</h1>
+        </div>
+        
+    )
+}
+
 class Competitions extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            selectedSeason: "2017"
+            selectedSeason: "2017",
+            competitions: null
         }
 
         this.getCompetitionData = this.getCompetitionData.bind(this);
@@ -42,36 +52,39 @@ class Competitions extends React.Component {
     }
 
     //calls API 
-    getCompetitionData() {
+    getCompetitionData(season) {
         const location = this.props.location.pathname;
-        const season = this.state.selectedSeason;
         const url = Api.constructUrl(location, "", season);
         Api.callApi(url).then(data => {
-            console.log(data)
-            return data
+            this.setState(() => {
+                return {
+                    selectedSeason: season,
+                    competitions: data
+                }
+            })
          });
     }
 
     //updates the state of component
-    updateSeason(year) {
+    updateSeason(season) {
         this.setState(() => {
-            return {selectedSeason: year}
+            return {
+                selectedSeason: season,
+                competitions: null
+            }
         });
+        this.getCompetitionData(season);
     }
 
     componentDidMount() {
-        this.getCompetitionData();
-    }
-
-    //calls API when there's a change in state (selected year)
-    componentDidUpdate() {
-        this.getCompetitionData();
+        this.getCompetitionData(this.state.selectedSeason);
     }
 
     render() {
         return(
-            <div>
+            <div className="competitions-container">
                 <SelectYear selectedSeason={this.state.selectedSeason} updateSeason={this.updateSeason} />
+                <CompetitionsGrid competitions={this.state.competitions}/>
             </div>
         )
     }
