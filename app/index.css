@@ -51,6 +51,20 @@ a:hover {
     cursor: pointer;
 }
 
+.loading {
+    flex: 8
+}
+
 .competitions-grid {
-    flex: 6
+    flex: 8;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 1%;
+    margin: 1%
+}
+
+.competition-square {
+    width: 200px;
+    text-align: center
+
 }

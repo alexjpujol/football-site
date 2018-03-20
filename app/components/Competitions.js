@@ -32,10 +32,23 @@ SelectYear.propTypes = {
 const CompetitionsGrid = props => {
     return(
         <div className="competitions-grid">
-            <h1>This is the grid</h1>
+            {props.competitions.map(competition => {
+                return (
+                    <div
+                    className="competition-square"
+                    key={competition.id}
+                    >
+                    {competition.caption
+                    }</div>
+                )
+            })}
         </div>
         
     )
+}
+
+CompetitionsGrid.propTypes = {
+    competitions: PropTypes.array.isRequired
 }
 
 class Competitions extends React.Component {
@@ -84,7 +97,7 @@ class Competitions extends React.Component {
         return(
             <div className="competitions-container">
                 <SelectYear selectedSeason={this.state.selectedSeason} updateSeason={this.updateSeason} />
-                <CompetitionsGrid competitions={this.state.competitions}/>
+                {!this.state.competitions ? <p className="loading">Loading...</p> : <CompetitionsGrid competitions={this.state.competitions}/>}
             </div>
         )
     }
