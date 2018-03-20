@@ -9,10 +9,11 @@ const myInit = {
     cache: 'default'
 };
 
-const constructUrl = (location, id = "", filter = "") => {
-    filter ? filter = `/?seasons=${filter}` : filter = "";
-    console.log(filter)
-    const url = `http://api.football-data.org/v1${location}/${id}${filter}`
+const constructUrl = (location, id, filter) => {
+    id ? id = `/${id}` : id = "";
+    filter ? filter = `/?season=${filter}` : filter = "";
+    const url = `http://api.football-data.org/v1${location}${id}${filter}`;
+    console.log(url);
     return url;
 }
 

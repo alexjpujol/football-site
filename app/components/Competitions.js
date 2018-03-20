@@ -41,6 +41,7 @@ class Competitions extends React.Component {
         this.updateSeason = this.updateSeason.bind(this);
     }
 
+    //calls API 
     getCompetitionData() {
         const location = this.props.location.pathname;
         const season = this.state.selectedSeason;
@@ -51,8 +52,19 @@ class Competitions extends React.Component {
          });
     }
 
-    updateSeason(e) {
-        this.setState({selectedSeason: e});
+    //updates the state of component
+    updateSeason(year) {
+        this.setState(() => {
+            return {selectedSeason: year}
+        });
+    }
+
+    componentDidMount() {
+        this.getCompetitionData();
+    }
+
+    //calls API when there's a change in state (selected year)
+    componentDidUpdate() {
         this.getCompetitionData();
     }
 
