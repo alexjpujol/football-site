@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './Home';
 import Nav from './Nav';
 import Teams from './Teams';
-import Competitions from './Competitions';
+import Competitions from './competitions/Competitions';
 
 const FourOhFour = () => <div>Uh oh, this page doesn't exist</div>;
 

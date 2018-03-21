@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
-import Api from '../utils/api';
 
 import LeagueTable from './LeagueTable';
 

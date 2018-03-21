@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
-import Api from '../utils/api';
+
+import LeagueTableLink from './LeagueTableLink';
 
 
 const CompetitionsGrid = props => {
@@ -22,3 +22,5 @@ const CompetitionsGrid = props => {
 CompetitionsGrid.propTypes = {
     competitions: PropTypes.array.isRequired
 }
+
+module.exports = CompetitionsGrid;
