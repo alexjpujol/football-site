@@ -15,6 +15,10 @@ body {
     margin: 10px
 }
 
+.active{
+    font-weight:bold
+}
+
 a {
     text-decoration: none;
     color: #d0021b;
@@ -59,12 +63,29 @@ a:hover {
     flex: 8;
     display: flex;
     flex-flow: row wrap;
-    padding: 1%;
-    margin: 1%
 }
 
 .competition-square {
-    width: 200px;
-    text-align: center
+    width: 300px;
+    margin: 10px;
+    text-align: center;
+}
 
+.competition-square li {
+    list-style-type: none;
+    margin-bottom: 5px
+}
+
+.league-name {
+    font-weight: bold
+}
+
+.league-table {
+    display: none;
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    border: 1px solid black
 }
