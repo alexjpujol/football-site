@@ -5,11 +5,10 @@ import PropTypes from 'prop-types';
 
 class LeagueTable extends React.Component {
 
-    constructor(props) {
-        super(props)
+    componentWillReceiveProps(nextProps) {
+        console.log(nextProps, "props received!")
     }
-    
-    
+
     render() {
         return(
             <div className="league-table">
@@ -20,7 +19,7 @@ class LeagueTable extends React.Component {
 }
 
 LeagueTable.propTypes = {
-    year: PropTypes.string.isRequired
+    table: PropTypes.array.isRequired
 }
 
 module.exports = LeagueTable;
