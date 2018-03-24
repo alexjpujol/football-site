@@ -1,18 +1,47 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
+
+const LeagueTableGrid = props => {
+
+    return (
+        <div>
+            <h1>Rendered</h1>
+            {props.table.map(row => {
+                <li>{row.teamName}</li>
+            })}
+        </div>
+    )
+}
+
+LeagueTableGrid.propTypes = {
+    table: PropTypes.array.isRequired
+}
 
 class LeagueTable extends React.Component {
 
+    constructor(props) {
+        super(props)
+        
+        this.state = {
+            table: []
+        }
+    }
+
     componentWillReceiveProps(nextProps) {
         console.log(nextProps, "props received!")
+
+        this.setState(() => {
+            return {
+                table: nextProps.table
+            }
+        })
     }
 
     render() {
         return(
             <div className="league-table">
-                <h1>This is a league table</h1>
+                {!this.state.table ? <p>Loading...</p> : <LeagueTableGrid table={this.state.table} /> }
             </div>
         )
     }
