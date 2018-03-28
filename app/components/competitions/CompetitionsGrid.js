@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Api from '../../utils/api';
 
-import LeagueTableLink from './LeagueTableLink';
 import LeagueTable from './LeagueTable';
 
 
@@ -16,19 +15,7 @@ class CompetitionsGrid extends React.Component {
         this.state = {
             table: []
         }
-        //this.clickLeagueTable = this.clickLeagueTable.bind(this);
     }
-
-    // clickLeagueTable(e) {
-    //     const competition = e.target.getAttribute("link");
-    //     Api.callApi(competition).then(data => {
-    //         this.setState(() => {
-    //             return {
-    //                 table: data.standing
-    //             };
-    //         })
-    //     });
-    // }
 
     render() {
         const match = this.props.url;

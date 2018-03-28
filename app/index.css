@@ -86,7 +86,8 @@ a:hover {
     margin: 0px auto;
     width: 90%;
     table-layout: fixed;
-    border-collapse: collapse
+    border-collapse: collapse;
+    min-width: 510px
 }
 
 thead th:nth-child(1) {
@@ -118,12 +119,21 @@ thead th:nth-child(7) {
 }
 
 thead {
-    border-bottom: 2px solid grey
+    border-bottom: 2px solid grey;
+    font-size: 1.1rem
 }
   
 th, td {
     padding: 10px;
-    text-align: center
+    text-align: center;
+}
+
+tr {
+    border-bottom: 1px solid grey
+}
+
+.team-name {
+    font-weight: bold
 }
 
 .wins {

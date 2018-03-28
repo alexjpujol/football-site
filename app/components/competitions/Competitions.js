@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import Api from '../../utils/api';
 
 import LeagueTable from './LeagueTable';
-import LeagueTableLink from './LeagueTableLink';
 import CompetitionsGrid from './CompetitionsGrid';
 import SelectYear from './SelectYear';
 

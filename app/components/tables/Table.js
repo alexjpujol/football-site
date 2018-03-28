@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Api from '../../utils/api';
 
+import Logo from './Logo';
+
 const TableHTML = props => {
     return (
         <table className="league-table">
@@ -22,8 +24,8 @@ const TableHTML = props => {
                 {props.table.map(row => {
                     return(
                         <tr key={row.position}>
-                            {!row.crestURI ? <td></td> : <td><img src={row.crestURI} width="30px" /></td> }
-                            <td>{row.teamName}</td>
+                            <td><Logo src={row.crestURI} alt={row.teamName} /></td>
+                            <td className="team-name">{row.teamName}</td>
                             <td className="wins">{row.wins}</td>
                             <td className="draws">{row.draws}</td>
                             <td className="losses">{row.losses}</td>
@@ -69,7 +71,7 @@ class Table extends React.Component {
                 {!this.state.table ? <p className="loading">"Loading"</p> : 
                     <div>
                         <h1 className="league-name">{this.state.table.leagueCaption}</h1>
-                        <TableHTML table={this.state.table.standing} />
+                        {this.state.table.standing.length === 0 ? <h1>No data...sorry!</h1> : <TableHTML table={this.state.table.standing} /> }
                     </div>
                 }
             </div>
