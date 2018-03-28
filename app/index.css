@@ -78,15 +78,66 @@ a:hover {
 }
 
 .league-name {
-    font-weight: bold
+    font-weight: bold;
+    text-align: center
 }
 
 .league-table {
-    display: none;
-    width: 600px;
-    height: 600px;
-    position: absolute;
-    top: 25%;
-    left: 25%;
-    border: 1px solid black
+    margin: 0px auto;
+    width: 90%;
+    table-layout: fixed;
+    border-collapse: collapse
+}
+
+thead th:nth-child(1) {
+    width: 5%;
+}
+  
+thead th:nth-child(2) {
+    width: 25%;
+}
+  
+thead th:nth-child(3) {
+    width: 10%;
+}
+  
+thead th:nth-child(4) {
+    width: 10%;
+}
+
+thead th:nth-child(5) {
+    width: 10%;
+}
+
+thead th:nth-child(6) {
+    width: 10%;
+}
+
+thead th:nth-child(7) {
+    width: 10%;
+}
+
+thead {
+    border-bottom: 2px solid grey
+}
+  
+th, td {
+    padding: 10px;
+    text-align: center
+}
+
+.wins {
+    background-color: rgba(99, 203, 108, 0.5)
+}
+
+.losses {
+    background-color: rgba(255, 0, 0, 0.5)
+}
+
+.positive { 
+    color: rgba(99, 203, 108, 1)
+}
+
+.negative {
+    color: red
 }
