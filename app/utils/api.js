@@ -11,7 +11,7 @@ const myInit = {
 
 const constructUrl = (location, id, filter) => {
     id ? id = `/${id}` : id = "";
-    filter ? filter = `/?season=${filter}` : filter = "";
+    filter ? filter = `?season=${filter}` : filter = "";
     const url = `http://api.football-data.org/v1${location}${id}${filter}`;
     console.log(url);
     return url;

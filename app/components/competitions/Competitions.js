@@ -56,7 +56,7 @@ class Competitions extends React.Component {
         return(
             <div className="competitions-container">
                 <SelectYear selectedSeason={this.state.selectedSeason} updateSeason={this.updateSeason} />
-                {!this.state.competitions ? <p className="loading">Loading...</p> : <CompetitionsGrid competitions={this.state.competitions}/>}
+                {!this.state.competitions ? <p className="loading">Loading...</p> : <CompetitionsGrid competitions={this.state.competitions} url={this.props.match}/>}
             </div>
         )
     }

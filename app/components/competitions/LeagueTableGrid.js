@@ -6,10 +6,13 @@ class LeagueTableGrid extends React.Component {
 
     constructor(props) {
         super(props)
+
+        this.state = {}
     }
 
     componentDidUpdate(prevProps,props) {
         console.log(prevProps, props)
+        this.set
     }
 
     render() {
