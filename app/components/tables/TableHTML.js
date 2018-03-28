@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 
-import Logo from './Logo';
+import Logo from '../common/Logo';
 
 const TableHTML = props => {
     return (
@@ -22,7 +22,7 @@ const TableHTML = props => {
                 {props.table.map(row => {
                     return(
                         <tr key={row.position}>
-                            <td><Logo src={row.crestURI} alt={row.teamName} /></td>
+                            <td><Logo src={row.crestURI} alt={row.teamName} height="30px" /></td>
                             <td className="team-name">{row.teamName}</td>
                             <td className="wins">{row.wins}</td>
                             <td className="draws">{row.draws}</td>

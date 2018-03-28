@@ -12,13 +12,14 @@ const imageError = error => {
 const Logo = props => {
 
     return (
-        <img src={props.src || notFoundImage} alt={props.teamName} onError={imageError} height="30px" />
+        <img src={props.src || notFoundImage} alt={props.teamName} onError={imageError} height={props.height} />
     )
 }
 
 Logo.propTypes = {
     src: PropTypes.string,
-    alt: PropTypes.string.isRequired
+    alt: PropTypes.string.isRequired,
+    height: PropTypes.string.isRequired
 }
 
 module.exports = Logo;

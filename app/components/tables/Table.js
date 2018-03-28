@@ -35,7 +35,7 @@ class Table extends React.Component {
                 {!this.state.table ? <p className="loading">"Loading"</p> : 
                     <div>
                         <h1 className="league-name">{this.state.table.leagueCaption}</h1>
-                        {this.state.table.standing.length === 0 ? <h1>No data...sorry!</h1> : <TableHTML table={this.state.table.standing} /> }
+                        {this.state.table.standing.length === 0 ? <p className="loading">The API doesn't have data on this...sorry!</p> : <TableHTML table={this.state.table.standing} /> }
                     </div>
                 }
             </div>

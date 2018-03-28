@@ -80,6 +80,11 @@ a:hover {
     margin-bottom: 5px
 }
 
+.caption {
+    font-weight: bold;
+    font-size: 0.8rem
+}
+
 .league-name {
     font-weight: bold;
     text-align: center

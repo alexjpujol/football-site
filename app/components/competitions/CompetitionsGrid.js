@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Api from '../../utils/api';
+import Logo from '../common/Logo';
 
 import LeagueTable from './LeagueTable';
 
@@ -41,8 +42,9 @@ const CompetitionsGrid = props => {
                             <li>
                                 <Link to={{
                                     pathname: `${match.url}/${competition.id}/leagueTable`
-                                }}><img src={leagueLogos[competition.league]} alt={competition.caption} height="120px"/></Link>
+                                }}><Logo src={leagueLogos[competition.league]} alt={competition.caption} height="100px"/></Link>
                             </li>
+                            <li className="caption">{competition.caption}</li>
                         </ul>
                     </div>
                 )
