@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import Logo from '../common/Logo';
 
 const TableHTML = props => {
+
     return (
         <table className="league-table">
             <thead>
@@ -20,10 +22,19 @@ const TableHTML = props => {
             </thead>
             <tbody>
                 {props.table.map(row => {
+
+                    const link = row._links.team.href.split("/");
+
                     return(
                         <tr key={row.position}>
                             <td><Logo src={row.crestURI} alt={row.teamName} height="30px" /></td>
-                            <td className="team-name">{row.teamName}</td>
+                            <td className="team-name">
+                                <Link to={{
+                                    pathname: `/teams/${link[link.length - 1]}`,
+                                }}>
+                                    {row.teamName}
+                                </Link>
+                            </td>
                             <td className="wins">{row.wins}</td>
                             <td className="draws">{row.draws}</td>
                             <td className="losses">{row.losses}</td>

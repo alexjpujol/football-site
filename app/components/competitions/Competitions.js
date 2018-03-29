@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Api from '../../utils/api';
 
-import LeagueTable from './LeagueTable';
 import CompetitionsGrid from './CompetitionsGrid';
 import SelectYear from './SelectYear';
 

@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import Api from '../../utils/api';
 import Logo from '../common/Logo';
 
-import LeagueTable from './LeagueTable';
 
 const leagueLogos = {
         "SA": "https://upload.wikimedia.org/wikipedia/en/f/f7/LegaSerieAlogoTIM.png",

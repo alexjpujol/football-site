@@ -7,7 +7,7 @@ import Api from '../../utils/api';
 import TableHTML from './TableHTML';
 
 
-class Table extends React.Component {
+class TableContainer extends React.Component {
     
     constructor(props) {
         super(props)
@@ -20,6 +20,7 @@ class Table extends React.Component {
 
     componentDidMount() {
         const string = Api.constructUrl(this.props.location.pathname);
+        console.log(string)
         Api.callApi(string).then(data => {
                 this.setState(() => {
                     return {
@@ -43,4 +44,4 @@ class Table extends React.Component {
     }
 }
 
-module.exports = Table;
+module.exports = TableContainer;
