@@ -43,7 +43,11 @@ const CompetitionsGrid = props => {
                                     pathname: `${match.url}/${competition.id}/leagueTable`
                                 }}><Logo src={leagueLogos[competition.league]} alt={competition.caption} height="100px"/></Link>
                             </li>
-                            <li className="caption">{competition.caption}</li>
+                            <li className="caption">
+                                <Link to={{
+                                    pathname: `${match.url}/${competition.id}/leagueTable`
+                                }}>{competition.caption}</Link>
+                            </li>
                         </ul>
                     </div>
                 )

@@ -39,6 +39,10 @@ a:hover {
     text-align: center;
 }
 
+.home-container img {
+    width: 100%;
+}
+
 .competitions-container {
     display: flex;
 }
@@ -85,8 +89,14 @@ a:hover {
 }
 
 .caption {
-    font-weight: bold;
-    font-size: 0.8rem
+    font-size: 0.8rem;
+    font-weight: 400;
+    transition: font-weight .4s ease-in-out;
+}
+
+.caption:hover {
+    font-weight: 800;
+    transition: font-weight .4s ease-in-out;
 }
 
 .league-name {
