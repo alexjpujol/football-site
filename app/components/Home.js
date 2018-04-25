@@ -7,6 +7,7 @@ class Home extends React.Component {
             <div className="home-container">
                 <h1>Alex's Football Site</h1>
                 <h2>For all your football needs</h2>
+                {/* <img src="/public/images/NOU_CAMP.JPG" width="600px" alt="Alex at the Nou Camp"/> */}
             </div>  
         )
     }

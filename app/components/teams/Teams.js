@@ -31,7 +31,7 @@ class Teams extends React.Component {
                 {!this.state.players ? <p className="loading">"Loading"</p> : 
                     <div>
                         {/* <h1 className="league-name">{this.state.table.leagueCaption}</h1> */}
-                        {!this.state.players ? <p className="loading">The API doesn't have data on this...sorry!</p> : <TeamInfo team={this.state.players} /> }
+                        {!this.state.players || this.state.players.length === 0 ? <p className="loading">The API doesn't have data on this...sorry!</p> : <TeamInfo team={this.state.players} /> }
                     </div>
                 }
             </div>

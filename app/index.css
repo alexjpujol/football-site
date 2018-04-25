@@ -35,6 +35,10 @@ a:hover {
     align-items: center;
 }
 
+.home-container {
+    text-align: center;
+}
+
 .competitions-container {
     display: flex;
 }

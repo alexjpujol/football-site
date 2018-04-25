@@ -23,9 +23,9 @@ const TeamInfo = props => {
                     return(
                         <tr key={row.jerseyNumber}>
                             <td>{row.name}</td>
-                            <td className="wins">{row.position}</td>
-                            <td className="draws">{row.nationality}</td>
-                            <td className="losses">{row.dateOfBirth}</td>
+                            <td>{row.position}</td>
+                            <td>{row.nationality}</td>
+                            <td>{row.dateOfBirth}</td>
                             <td>{row.jerseyNumber}</td>
                         </tr>
                     )
