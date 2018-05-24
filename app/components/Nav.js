@@ -10,9 +10,9 @@ const Nav = () => {
             <li>
                 <NavLink activeClassName="active" to="/competitions">Competitions</NavLink>  
             </li>
-            {/* <li>
-                <NavLink activeClassName="active" to="/players">Players</NavLink>
-            </li> */}
+            <li>
+                <NavLink activeClassName="active" to="/teams">Teams</NavLink>
+            </li>
             {/* <li>
                 <NavLink activeClassName="active" to="/fixtures">Fixtures</NavLink>  
             </li> */}

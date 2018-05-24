@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Api from '../../utils/api';
 
-class Teams extends React.Component {
-    
+
+class Player extends React.Component {
+
+
     render() {
         return(
             <div>
-                This is the team search!
+                <h1>This is the player page!</h1>
             </div>
         )
     }
-
 }
 
-module.exports = Teams;
+module.exports = Player;
