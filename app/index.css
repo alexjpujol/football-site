@@ -1,7 +1,23 @@
+/* 
+    Font Rules:
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif; 
+*/
+
 body {
     height: 100%;
     width: 100%;
-    font-family: sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    background: url('/public/images/cream_dust.png') repeat 0 0;
+}
+
+h1, h2 {
+    text-shadow: 0.5px 0.5px 0.5px #ccc;
+    font-family: 'Roboto', sans-serif;
+}
+
+.jumbotron {
+    box-shadow: 0 0 1em 1em #ccc
 }
 
 .nav {
@@ -25,9 +41,9 @@ a {
     cursor: pointer;
 }
 
-a:hover {
+/* a:hover {
     font-weight: bold
-}
+} */
 
 .container {
     width: 80%;
@@ -91,12 +107,12 @@ a:hover {
 .caption {
     font-size: 0.8rem;
     font-weight: 400;
-    transition: font-weight .4s ease-in-out;
+    transition: font-weight ease-in-out;
 }
 
 .caption:hover {
     font-weight: 800;
-    transition: font-weight .4s ease-in-out;
+    transition: font-weight ease-in-out;
 }
 
 .league-name {
