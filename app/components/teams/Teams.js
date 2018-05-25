@@ -12,21 +12,20 @@ const Teams = props => {
 
     return(
         <div className="container">
-            <h1>Teams</h1>
-                <ul className="teams">
-                    {teams.map(team => {
-                        return(
-                            <li className="team" key={team.id}>
-                                <img src={team.logo} height="150px" />
-                                <Link to={{
-                                    pathname: `${match.url}/${team.id}`
-                                }}>
-                                    <h3>{team.name}</h3>
-                                </Link>
-                            </li>
-                        )
-                    })}
-                </ul>
+            <ul className="teams">
+                {teams.map(team => {
+                    return(
+                        <li className="team" key={team.id}>
+                            <img src={team.logo} />
+                            <Link to={{
+                                pathname: `${match.url}/${team.id}`
+                            }}>
+                                <h3>{team.name}</h3>
+                            </Link>
+                        </li>
+                    )
+                })}
+            </ul>
         </div>
     )
 
