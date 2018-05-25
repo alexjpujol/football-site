@@ -49,6 +49,7 @@ a {
     width: 80%;
     margin: 0 auto;
     align-items: center;
+    text-align: center;
 }
 
 .home-container {
@@ -188,4 +189,16 @@ tr {
 
 .negative {
     color: red
+}
+
+.teams {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center
+}
+
+.team {
+    list-style-type: none;
+    padding: 2%;
+    margin: 2%;
 }
