@@ -16,7 +16,11 @@ const Teams = props => {
                 {teams.map(team => {
                     return(
                         <li className="team" key={team.id}>
-                            <img src={team.logo} />
+                            <Link to={{
+                                pathname: `${match.url}/${team.id}`
+                            }}>
+                                <img src={team.logo} />
+                            </Link>
                             <Link to={{
                                 pathname: `${match.url}/${team.id}`
                             }}>

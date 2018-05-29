@@ -20,7 +20,7 @@ const constructUrl = (location, id, filter) => {
 const callApi = url => {
     return fetch(url, myInit)
         .then(data => data.json())
-        .catch(e => console.warn(e));
+        .catch(e => console.error(e));
 }
 
 module.exports = {
