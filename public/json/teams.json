@@ -1,0 +1,86 @@
+[
+    {
+        "name": "Barcelona",
+        "logo": "http://upload.wikimedia.org/wikipedia/de/a/aa/Fc_barcelona.svg", 
+        "id": "81"
+    },
+    {
+        "name": "Real Madrid",
+        "logo": "http://upload.wikimedia.org/wikipedia/de/3/3f/Real_Madrid_Logo.svg",
+        "id": "86"
+    },
+    {   "name": "Atletico Madrid",
+        "logo": "http://upload.wikimedia.org/wikipedia/de/c/c1/Atletico_Madrid_logo.svg",
+        "id": "78"
+    },
+    {
+        "name": "Manchester United",
+        "logo": "http://upload.wikimedia.org/wikipedia/de/d/da/Manchester_United_FC.svg",
+        "id": "66"
+    },
+    {
+        "name": "Manchester City",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg",
+        "id": "65"
+    },
+    {
+        "name": "Chelsea", 
+        "logo": "http://upload.wikimedia.org/wikipedia/de/5/5c/Chelsea_crest.svg",
+        "id": "61"
+    },
+    {
+        "name": "Liverpool",
+        "logo": "http://upload.wikimedia.org/wikipedia/de/0/0a/FC_Liverpool.svg",
+        "id": "64"
+    },
+    {
+        "name": "Tottenham Hotspur",
+        "logo": "http://upload.wikimedia.org/wikipedia/de/b/b4/Tottenham_Hotspur.svg",
+        "id": "73"
+    },
+    {
+        "name": "Arsenal",
+        "logo": "http://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg",
+        "id": "57"
+    },
+    {
+        "name": "Bayern Munich", 
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Logo_FC_Bayern_M%C3%BCnchen_%282002%E2%80%932017%29.svg",
+        "id": "5"
+    },
+    {
+        "name": "Borussia Dortmund",
+        "logo": "http://upload.wikimedia.org/wikipedia/commons/6/67/Borussia_Dortmund_logo.svg",
+        "id": "4"
+    },
+    {
+        "name": "Paris Saint Germain", 
+        "logo": "https://upload.wikimedia.org/wikipedia/fr/8/86/Paris_Saint-Germain_Logo.svg",
+        "id": "524"
+    },
+    {
+        "name": "Juventus",
+        "logo": "http://upload.wikimedia.org/wikipedia/de/d/d2/Juventus_Turin.svg",
+        "id": "109"
+    },
+    {
+        "name": "Napoli",
+        "logo": "http://upload.wikimedia.org/wikipedia/commons/2/28/S.S.C._Napoli_logo.svg",
+        "id": "113"
+    },
+    {
+        "name": "AS Roma",
+        "logo": "http://upload.wikimedia.org/wikipedia/de/3/32/AS_Rom.svg",
+        "id": "100"
+    },
+    {
+        "name": "AC Milan",
+        "logo": "http://upload.wikimedia.org/wikipedia/de/9/9e/AC_Mailand_Logo.svg",
+        "id": "98"
+    },
+    {
+        "name": "Inter Milan",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Logo_of_FC_Inter_Milan_%281963-1979%29.svg",
+        "id": "108"
+    }
+]
