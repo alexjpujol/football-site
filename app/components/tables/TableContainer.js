@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Api from '../../utils/api';
 
 import TableHTML from './TableHTML';
+import CupHTML from './CupHTML';
 
 
 class TableContainer extends React.Component {
@@ -34,9 +35,10 @@ class TableContainer extends React.Component {
 
     determineTableType(table) {
         if (table.standing) {
-            return <TableHTML table={this.determineTableType(table.standing)} />
+
+            return <TableHTML table={this.state.table.standing} />
         } else if (table.standings) {
-            return <TableHTML cup={this.determineTableType(table.standings)} />
+            return <CupHTML cup={this.state.table.standings} />
         }
         return <p className="loading">The API doesn't have data on this...sorry!</p>
     }
@@ -47,7 +49,7 @@ class TableContainer extends React.Component {
                 {!this.state.table ? <p className="loading">"Loading"</p> : 
                     <div>
                         <h1 className="league-name">{this.state.table.leagueCaption}</h1>
-                        {this.state.table.standing || this.state.table.standings ? <TableHTML table={this.state.table.standing} /> : <p className="loading">The API doesn't have data on this...sorry!</p>}
+                        {this.state.table.standing || this.state.table.standings ? this.determineTableType(this.state.table) : <p className="loading">The API doesn't have data on this...sorry!</p>}
                     </div>
                 }
             </div>
