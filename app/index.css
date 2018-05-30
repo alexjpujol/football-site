@@ -121,7 +121,7 @@ a {
     text-align: center
 }
 
-.league-table, .team-info {
+.league-table, .team-info, .cup-tables {
     margin: 0px auto;
     width: 90%;
     table-layout: fixed;
@@ -209,4 +209,22 @@ tr {
 .team img {
     max-height: 250px;
     max-width: 250px;
+}
+
+.cup-tables {
+    display: flex;
+    margin: 0 auto;
+    flex-flow: row;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: space-evenly;
+}
+
+.cup-tables > div {
+    margin: 4%;
+    min-width: 200px;
+}
+
+.cup-tables table {
+    border-collapse: collapse
 }
